@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --ink: #151515;
+    --paper: #f7f6f2;
+    --white: #ffffff;
+    --line: #d8d7d1;
+    --muted: #6f6e68;
+    --lime: #d9ff43;
+    --blue: #c9e7ff;
+    --peach: #ffb698;
+    --display: "Manrope", sans-serif;
+    --body: "DM Sans", sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: 80px;
+    padding: 0 45px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/* LEFT */
+.main-nav {
+    justify-self: start;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.main-nav ul li {
+    list-style: none;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+}
+
+.utility-nav ul li i {
+    cursor: pointer;
+}
+
+/* CENTER */
+.logo button {
+    justify-self: center;
+    font-family: var(--display);
+    letter-spacing: -.08em;
+    background: none;
+    border: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #f0522d
+}
+
+/* RIGHT */
+.utility-nav {
+    justify-self: end;
+}
+
+.utility-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.utility-nav ul li {
+    list-style: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}   
+
+.hero-page {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+}
+
+.content-left {
+    flex: 0.80;
+    padding: 60px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-right {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #d5d5d5;
+    margin: 50px 0 20px;
+}
+
+.hero-content button {
+    margin-top: 1.5rem;
+    background-color: #111;
+    color: #fff;
+    padding: 1rem;
+    border: 1px #fff;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.hero-content h4 {
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+    font-size: 11.52px;
+}
+
+.hero-content h1 {
+    letter-spacing: -5px;
+    font-size: 100px;
+    font-family: Manrope, sans-serif;
+    font-weight: lighter;
+}
+
+.hero-content p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 2rem 0;
+    max-width: 28rem;
+}
+
+.product-info p {
+    color: var(--muted);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.product-info h3 {
+    font-size: 0.85rem;
+}
+
+.benefits-page {
+    width: 100%;
+    padding: 0 0 30px;
+    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 3rem;
+    display: grid;
+}
+
+.benefits-page .benefits-item {
+    flex-direction: column;
+    gap: .35rem;
+    padding-left: 2rem;
+    display: flex;
+}
+
+.benefits-page .benefits-item + .benefits-item {
+    border-left: 1px solid var(--line);
+}
+
+/* .benefits-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 120px;
+    padding: 26px 35px;
+    gap: 8px;
+    position: relative;
+} */
+
+.benefits-item h3 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .07px;
+    color: var(--ink);
+}
+
+.benefits-item p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.benefits-divider {
+    display: none;
+}
+
+/* .benefits-item:last-child p {
+    display: inline-block;
+    background: #e7e7e4;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+} */
+
+
+/* SHOP PRODUCTS  */
+
+.shopping-page {
+    padding: 7rem 3rem;
+}
+
+.section-heading {
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+}
+
+.section-heading p {
+    margin-bottom: 1.2rem;
+    font-size: 12px;
+}
+
+.section-heading h2 {
+    font-size: 66px;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+.section-heading button {
+   border: 0;
+    border-bottom: 1px solid var(--ink);
+    cursor: pointer;
+    background: none;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .7rem 0;
+    font-size: .78rem;
+    font-weight: 600;
+    display: flex;
+}
+
+.category-tabs {
+    border-bottom: 1px solid var(--line);
+    gap: 2.5rem;
+    margin: 3.5rem 0 2rem;
+    display: flex;
+    overflow-x: auto;
+}
+
+.category-tabs button {
+    color: var(--muted);
+    flex-shrink: 0;
+    padding: .85rem 0;
+    font-size: .78rem;
+    position: relative;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.category-tabs button.active {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    display: grid;
+}
+
+.product-card {
+    min-width: 0;
+}
+
+.product-card .product-image {
+    aspect-ratio: 4 / 5;
+    background: #ecebe7;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform .35s ease;
+}
+
+.product-image:hover img {
+    transform: scale(1.03);
+}
+
+.product-image .product-label {
+    background: var(--lime);
+    text-transform: uppercase;
+    padding: .45rem .6rem;
+    font-size: .65rem;
+    font-weight: 600;
+    position: absolute;
+    top: .8rem;
+    left: .8rem;
+}
+
+.favorite-button {
+    background: var(--white);
+    cursor: pointer;
+    border: 0;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    position: absolute;
+    top: .8rem;
+    right: .8rem;
+}
+
+.quickAdd-button {
+    background: var(--white);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    border: 0;
+    padding: .8rem 1rem;
+    font-size: .72rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
+    position: absolute;
+    bottom: .8rem;
+    left: .8rem;
+    transform: translateY(.6rem);
+    pointer-events: none;
+}
+
+.product-image:hover .quickAdd-button,
+.quickAdd-button:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition-delay: 0s;
+}
+
+.product-info {
+    justify-content: space-between;
+    padding: 1.1rem 0;
+    font-size: .82rem;
+    display: flex;
+}
+
+.product-info h3 {
+    margin: 0 0 .35rem;
+    font-size: .85rem;
+}
+
+.product-info p {
+    color: var(--muted);
+    margin: 0;
+    font-size: .75rem;
+}
+
+.editorial-page {
+    background: var(--peach);
+    grid-template-columns: 55% 45%;
+    min-height: 42rem;
+    display: grid;
+}
+
+.editorial-image {
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.editorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+.editorial-image:hover img {
+    transform: scale(1.03);
+}
+
+.editorial-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem clamp(3rem, 7vw, 8rem);
+    display: flex;
+}
+
+.editorial-content p:first-of-type {
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    margin: 0 0 1.75rem;
+    font-size: .72rem;
+    font-weight: 600;
+}
+
+.editorial-content h2 {
+    font-size: clamp(2.7rem, 4.5vw, 5rem);
+    font-weight: 500;
+}
+
+.editorial-content p:last-of-type {
+    max-width: 28rem;
+    margin: 2rem 0;
+    line-height: 1.7;
+    font-weight: 100;
+}
+
+.editorial-content hr {
+    display: none;
+}
+
+.editorial-content button {
+    border: 0;
+    border-bottom: 1px solid var(--ink);
+    cursor: pointer;
+    background: none;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .7rem 0;
+    font-size: .78rem;
+    font-weight: 600;
+    display: flex;
+}
+
+footer {
+    background: var(--ink);
+    color: var(--white);
+    justify-content: space-between;
+    align-items: center;
+    min-height: 9rem;
+    padding: 0 3rem;
+    font-size: .72rem;
+    display: flex;
+}
+
+footer .brand {
+    font-family: var(--display);
+    letter-spacing: -.08em;
+    background: none;
+    border: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+footer span {
+    letter-spacing: 1.5px;
+    font-size: 11px;
+}
